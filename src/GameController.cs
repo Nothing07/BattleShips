@@ -12,7 +12,7 @@ using SwinGameSDK;
 /// </summary>
 public static class GameController
 {
-
+	//Store Values
 	private static BattleShipsGame _theGame;
 	private static Player _human;
 
@@ -118,6 +118,12 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
+	/// <summary>
+	/// Plays the hit sequence.
+	/// </summary>
+	/// <param name="row">Row.</param>
+	/// <param name="column">Column.</param>
+	/// <param name="showAnimation">If set to <c>true</c> show animation.</param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 
@@ -130,6 +136,12 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
+	/// <summary>
+	/// Plays the miss sequence.
+	/// </summary>
+	/// <param name="row">Row.</param>
+	/// <param name="column">Column.</param>
+	/// <param name="showAnimation">If set to <c>true</c> show animation.</param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

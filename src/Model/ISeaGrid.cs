@@ -12,10 +12,20 @@ using System.Diagnostics;
 public interface ISeaGrid
 {
 
+	/// <summary>
+	/// Gets the width.
+	/// </summary>
+	/// <value>The width.</value>
 
 	int Width { get; }
 
+	/// <summary>
+	/// Gets the height.
+	/// </summary>
+	/// <value>The height.</value>
+
 	int Height { get; }
+
 	/// <summary>
 	/// Indicates that the grid has changed.
 	/// </summary>
@@ -37,6 +47,7 @@ public interface ISeaGrid
 	/// <param name="row">the row of the tile</param>
 	/// <param name="col">the column of the tile</param>
 	/// <returns>the result of the attack</returns>
+
 	AttackResult HitTile(int row, int col);
 }
 

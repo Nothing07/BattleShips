@@ -15,6 +15,7 @@ using System.Diagnostics;
 /// </remarks>
 public class Ship
 {
+	//Create the variables
 	private ShipName _shipName;
 	private int _sizeOfShip;
 	private int _hitsTaken = 0;

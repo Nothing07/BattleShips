@@ -35,6 +35,7 @@ static class DiscoveryController
 	/// </summary>
 	private static void DoAttack()
 	{
+		//Stores the variables
 		Point2D mouse = default(Point2D);
 
 		mouse = SwinGame.MousePosition();

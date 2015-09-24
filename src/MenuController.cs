@@ -40,6 +40,8 @@ static class MenuController
 		}
 
 	};
+
+	//Stores the variables and constants
 	private const int MENU_TOP = 575;
 	private const int MENU_LEFT = 30;
 	private const int MENU_GAP = 0;
@@ -69,6 +71,7 @@ static class MenuController
 	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
 
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
+
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>

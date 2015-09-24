@@ -12,6 +12,8 @@ using SwinGameSDK;
 /// </summary>
 static class DeploymentController
 {
+	// Creates the variables as constants and stores their values, and establishes the instances of 
+	// objects
 	private const int SHIPS_TOP = 98;
 	private const int SHIPS_LEFT = 20;
 	private const int SHIPS_HEIGHT = 90;

@@ -11,7 +11,7 @@ using System.Diagnostics;
 /// </summary>
 public class Player : IEnumerable<Ship>
 {
-
+	//Creates the varibles and establishes the instaces of Objects eg the Random Object
 	protected static Random _Random = new Random();
 	private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
 	private SeaGrid _playerGrid;
@@ -40,6 +40,10 @@ public class Player : IEnumerable<Ship>
 		set { _enemyGrid = value; }
 	}
 
+	/// <summary>
+	/// Initializes a new instance of the Player class.
+	/// </summary>
+	/// <param name="controller">Controller.</param>
 	public Player(BattleShipsGame controller)
 	{
 		_game = controller;
@@ -105,6 +109,10 @@ public class Player : IEnumerable<Ship>
 		get { return _shots; }
 	}
 
+	/// <summary>
+	/// The number of successful hits.
+	/// </summary>
+	/// <value>The hits.</value>
 	public int Hits {
 		get { return _hits; }
 	}
@@ -118,6 +126,10 @@ public class Player : IEnumerable<Ship>
 		get { return _misses; }
 	}
 
+	/// <summary>
+	/// Returns the score of the game
+	/// </summary>
+	/// <value>The score.</value>
 	public int Score {
 		get {
 			if (IsDestroyed) {
@@ -196,6 +208,9 @@ public class Player : IEnumerable<Ship>
 		return result;
 	}
 
+	/// <summary>
+	/// Randomizes the deployment.
+	/// </summary>
 	public virtual void RandomizeDeployment()
 	{
 		bool placementSuccessful = false;

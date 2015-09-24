@@ -10,6 +10,7 @@ using System.Diagnostics;
 /// </summary>
 public class AttackResult
 {
+	//Create the Variables
 	private ResultOfAttack _Value;
 	private Ship _Ship;
 	private string _Text;

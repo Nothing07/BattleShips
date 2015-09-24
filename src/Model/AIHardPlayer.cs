@@ -43,6 +43,11 @@ public class AIHardPlayer : AIPlayer
 			get { return _Source; }
 		}
 
+		/// <summary>
+		/// Initializes a new instance of the Target class.
+		/// </summary>
+		/// <param name="shootat">Shootat.</param>
+		/// <param name="source">Source.</param>
 		internal Target(Location shootat, Location source)
 		{
 			_ShotAt = shootat;
@@ -89,6 +94,7 @@ public class AIHardPlayer : AIPlayer
 		HittingShip
 	}
 
+	// Stores Values
 	private AIStates _CurrentState = AIStates.Searching;
 	private Stack<Target> _Targets = new Stack<Target>();
 	private List<Target> _LastHit = new List<Target>();
