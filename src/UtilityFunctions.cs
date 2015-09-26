@@ -1,5 +1,3 @@
-
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -239,7 +237,8 @@ static class UtilityFunctions
 			SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
 				break;
 			case GameState.Deploying:
-			SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
+				SwinGame.DrawBitmap (GameResources.GameImage ("Deploy"), 0, 0);
+				SwinGame.StopMusic ();
 				break;
 			default:
 				SwinGame.ClearScreen();

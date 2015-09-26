@@ -1,4 +1,4 @@
-using Microsoft.VisualBasic;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -183,6 +183,9 @@ public class Player : IEnumerable<Ship>
 
 		switch (result.Value) {
 			case ResultOfAttack.Destroyed:
+				_shots++;
+				_hits++;
+				break;
 			case ResultOfAttack.ShotAlready:
 				break;
 			case ResultOfAttack.Hit:
