@@ -1,5 +1,3 @@
-
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -95,7 +93,7 @@ static class HighScoreController
 	/// 
 	/// Where NNN is the name and SSS is the score
 	/// </remarks>
-	private static void SaveScores()
+	public static void SaveScores()
 	{
 		string filename = null;
 		filename = SwinGame.PathToResource("highscores.txt");
@@ -192,12 +190,14 @@ static class HighScoreController
 			s.Name = SwinGame.TextReadAsASCII();
 
 			if (s.Name.Length < 3) {
-				s.Name = s.Name + new string(Convert.ToChar(" "), 3 - s.Name.Length);
+				s.Name = s.Name.PadRight(3);
+				// + new string(Convert.ToChar(" "), 3 - s.Name.Length);
 			}
 
 			_Scores.RemoveAt(_Scores.Count - 1);
 			_Scores.Add(s);
 			_Scores.Sort();
+			SaveScores ();
 
 			GameController.EndCurrentState();
 		}

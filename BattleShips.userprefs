@@ -1,23 +1,28 @@
 ﻿<Properties StartupItem="BattleShips.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\UtilityFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\HighScoreController.cs">
     <Files>
-      <File FileName="src\Model\AIHardPlayer.cs" Line="20" Column="16" />
-      <File FileName="src\Model\AIMediumPlayer.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="350" Column="20" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\DeploymentController.cs" Line="102" Column="66" />
-      <File FileName="src\GameResources.cs" Line="104" Column="23" />
-      <File FileName="src\Model\SeaGrid.cs" Line="23" Column="44" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\UtilityFunctions.cs" Line="302" Column="4" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\DiscoveryController.cs" Line="76" Column="94" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\EndingGameController.cs" Line="35" Column="16" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\GameLogic.cs" Line="29" Column="17" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\HighScoreController.cs" Line="202" Column="19" />
-      <File FileName="c:\Users\Kaelob\Desktop\Semester Two\SWE2001 - Development Project 1 - Tools and Practices\Labs\Week Five\converted_battleship\src\MenuController.cs" Line="317" Column="19" />
+      <File FileName="src\HighScoreController.cs" Line="176" Column="21" />
+      <File FileName="src\EndingGameController.cs" Line="21" Column="35" />
+      <File FileName="src\DeploymentController.cs" Line="1" Column="1" />
+      <File FileName="src\GameController.cs" Line="185" Column="9" />
+      <File FileName="src\GameResources.cs" Line="40" Column="42" />
+      <File FileName="src\MenuController.cs" Line="208" Column="5" />
+      <File FileName="src\GameLogic.cs" Line="4" Column="26" />
+      <File FileName="src\UtilityFunctions.cs" Line="1" Column="1" />
     </Files>
     <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True" />
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BattleShips" expanded="True">
+            <Node name="BattleShips" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="Model" expanded="True" />
+                <Node name="HighScoreController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

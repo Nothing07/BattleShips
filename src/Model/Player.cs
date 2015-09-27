@@ -1,5 +1,4 @@
 
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,7 +42,7 @@ public class Player : IEnumerable<Ship>
 	public Player(BattleShipsGame controller)
 	{
 		_game = controller;
-    _playerGrid = new SeaGrid(_Ships);
+   		_playerGrid = new SeaGrid(_Ships);
 
 		//for each ship add the ships name so the seagrid knows about them
 		foreach (ShipName name in Enum.GetValues(typeof(ShipName))) {
@@ -179,17 +178,23 @@ public class Player : IEnumerable<Ship>
 	/// <returns>the result of the attack</returns>
 	internal AttackResult Shoot(int row, int col)
 	{
-		_shots += 1;
 		AttackResult result = default(AttackResult);
 		result = EnemyGrid.HitTile(row, col);
 
 		switch (result.Value) {
 			case ResultOfAttack.Destroyed:
+				_shots++;
+				_hits++;
+				break;
+			case ResultOfAttack.ShotAlready:
+				break;
 			case ResultOfAttack.Hit:
-				_hits += 1;
+				_hits++;
+				_shots++;
 				break;
 			case ResultOfAttack.Miss:
-				_misses += 1;
+				_misses++;
+				_shots++;
 				break;
 		}
 

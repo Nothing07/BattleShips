@@ -1,5 +1,3 @@
-
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -128,7 +126,7 @@ static class UtilityFunctions
 			for (int col = 0; col <= 9; col++) {
 				colLeft = left + (cellGap + cellWidth) * col;
 
-				Color fillColor = default(Color);
+				Color fillColor = SwinGame.RGBAColor(0,0,0,0);
 				bool draw = false;
 
 				draw = true;
@@ -147,6 +145,7 @@ static class UtilityFunctions
 						else
 							fillColor = LARGE_MISS;
 						break;
+
 					case TileView.Hit:
 						if (small)
 							fillColor = SMALL_HIT;
@@ -238,7 +237,8 @@ static class UtilityFunctions
 			SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
 				break;
 			case GameState.Deploying:
-			SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
+				SwinGame.DrawBitmap (GameResources.GameImage ("Deploy"), 0, 0);
+				SwinGame.StopMusic ();
 				break;
 			default:
 				SwinGame.ClearScreen();
