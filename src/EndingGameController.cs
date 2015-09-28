@@ -25,7 +25,6 @@ static class EndingGameController
 		} else {
 			SwinGame.DrawTextLines("-- WINNER --", Color.Gold, Color.Transparent, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
 		}
-		SwinGame.Delay (10);
 	}
 
 	/// <summary>
@@ -35,6 +34,7 @@ static class EndingGameController
 	public static void HandleEndOfGameInput()
 	{
 		if (SwinGame.MouseClicked(MouseButton.LeftButton) || SwinGame.KeyTyped(KeyCode.vk_RETURN) || SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
+			SwinGame.Delay (5000);
 			HighScoreController.ReadHighScore(GameController.HumanPlayer.Score);
 			GameController.EndCurrentState();
 		}

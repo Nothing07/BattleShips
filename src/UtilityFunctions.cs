@@ -238,7 +238,6 @@ static class UtilityFunctions
 				break;
 			case GameState.Deploying:
 				SwinGame.DrawBitmap (GameResources.GameImage ("Deploy"), 0, 0);
-				SwinGame.StopMusic ();
 				break;
 			default:
 				SwinGame.ClearScreen();

@@ -79,6 +79,9 @@ public static class GameController
 			case AIOption.Hard:
 				_ai = new AIHardPlayer(_theGame);
 				break;
+			case AIOption.Easy:
+				_ai = new AIEasyPlayer (_theGame);
+				break;
 			default:
 				_ai = new AIMediumPlayer(_theGame);
 				break;
@@ -288,9 +291,6 @@ public static class GameController
 			case GameState.ViewingGameMenu:
 			MenuController.HandleGameMenuInput();
 				break;
-			case GameState.Winning:
-			MenuController.HandleGameMenuInput ();
-			break;
 			case GameState.AlteringSettings:
 			MenuController.HandleSetupMenuInput();
 				break;
@@ -334,18 +334,15 @@ public static class GameController
 			case GameState.Deploying:
 			DeploymentController.DrawDeployment();
 				break;
-		case GameState.Discovering:
+			case GameState.Discovering:
 			DiscoveryController.DrawDiscovery ();
 				break;
 			case GameState.EndingGame:
 			EndingGameController.DrawEndOfGame();
 				break;
-			case GameState.Winning:
-			EndingGameController.DrawEndOfGame ();
-				break;
-		case GameState.ViewingHighScores:
+			case GameState.ViewingHighScores:
 			HighScoreController.DrawHighScores ();
-			break;
+				break;
 		}
 
 		UtilityFunctions.DrawAnimations();
@@ -389,6 +386,16 @@ public static class GameController
 	public static void SetDifficulty(AIOption setting)
 	{
 		_aiSetting = setting;
+	}
+
+	public static void ToggleMusic()
+	{
+		if (!SwinGame.MusicPlaying())
+		{
+			SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+		}
+		else
+			SwinGame.StopMusic();
 	}
 
 }
