@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-// using System.Data;
 using System.Diagnostics;
 
 /// <summary>
-/// The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
+/// The AIEasyPlayer is a type of AIPlayer where it will try and destroy a ship
 /// if it has found a ship
 /// </summary>
 public class AIEasyPlayer : AIPlayer
@@ -109,10 +108,3 @@ public class AIEasyPlayer : AIPlayer
 		}
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================
