@@ -82,7 +82,7 @@ public static class GameController
 				_ai = new AIHardPlayer(_theGame);
 				break;
 			default:
-				_ai = new AIHardPlayer(_theGame);
+				_ai = new AIMediumPlayer(_theGame);
 				break;
 		}
 
@@ -375,6 +375,16 @@ public static class GameController
 	public static void SetDifficulty(AIOption setting)
 	{
 		_aiSetting = setting;
+	}
+
+	public static void ToggleMusic()
+	{
+		if (!SwinGame.MusicPlaying())
+		{
+			SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+		}
+		else
+			SwinGame.StopMusic();
 	}
 
 }
